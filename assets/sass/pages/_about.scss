@@ -1,0 +1,152 @@
+/*---------------------------------------
+    28. About Area
+---------------------------------------*/
+
+.about-area {}
+
+.about-img-wrapper {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    @include responsive(xs) {
+        padding-top: 0;
+    }
+}
+
+.about-thumb-area {
+    img {
+        width: 100%;
+    }
+}
+
+.about-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 140px;
+    width: 140px;
+    background: var(--main-color-three);
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    z-index: 9;
+    @include responsive(allPhone) {
+        height: 120px;
+        width: 120px;
+    }
+    @include responsive(xs) {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.about-thumb-border {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        background: var(--main-color-three);
+        z-index: -5;
+        border-radius: 10px;
+        @include responsive(xl) {
+            height: 80%;
+            width: 70%;
+        }
+        @include responsive(lg) {
+            height: 80%;
+            width: 70%;
+        }
+        @include responsive(allPhone) {
+            height: 70%;
+            width: 70%;
+        }
+        @include responsive(xs) {
+            display: none;
+        }
+    }
+    img {}
+}
+
+.about-padding-left {
+    padding-left: 121px;
+    @include responsive(xl) {
+        padding-left: 40px;
+    }
+    @include responsive(lg) {
+        padding-left: 40px;
+    }
+    @include responsive(allPhone) {
+        padding-left: 0;
+    }
+}
+
+.about-content-wrapper {
+    .about-inner {
+        .about-span {
+            display: inline-block;
+            font-size: 28px;
+            @include responsive(allPhone) {
+                font-size: 24px;
+            }
+            @include responsive(xs) {
+                font-size: 21px;
+            }
+            @include responsive(xxs) {
+                font-size: 20px;
+            }
+            @include responsive(vxxs) {
+                font-size: 18px;
+            }
+        }
+        .about-title {
+            font-size: 42px;
+            line-height: 60px;
+            margin-top: 10px;
+            @include responsive(allPhone) {
+                font-size: 36px;
+                line-height: 50px;
+                margin-top: 5px;
+            }
+            @include responsive(xs) {
+                font-size: 32px;
+            }
+            @include responsive(xxs) {
+                font-size: 28px;
+            }
+            @include responsive(vxxs) {
+                font-size: 25px;
+            }
+        }
+        .about-para {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 30px;
+            @include responsive(xl) {
+                font-size: 16px;
+            }
+            @include responsive(lg) {
+                font-size: 16px;
+            }
+            @include responsive(allPhone) {
+                font-size: 15px;
+                margin-top: 20px;
+                line-height: 28px;
+            }
+            @include responsive(vxxs) {
+                margin-top: 15px;
+            }
+        }
+    }
+}

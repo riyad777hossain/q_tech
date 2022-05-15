@@ -1,0 +1,144 @@
+/*---------------------------------------
+    08. Isotope List
+---------------------------------------*/
+
+.isootope-list {
+    &.absolute-position-right {
+        margin-top: -72px;
+        @include responsive(allPhone) {
+            margin-top: 30px;
+        }
+        .isootope-button {
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            @include responsive(allPhone) {
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.isootope-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    &.style-02 {
+        .list {
+            border: 1px solid $steam-color;
+            background: none;
+            margin: 0 0 5px;
+            @include responsive(allPhone) {
+                padding: 6px 15px;
+            }
+            &:not(:last-child) {
+                margin-right: 20px;
+                @include responsive(allPhone) {
+                    margin-right: 10px;
+                }
+            }
+            &::before {
+                background: var(--main-color-two);
+            }
+            &.active {
+                border-color: var(--main-color-two);
+            }
+            &:hover {
+                border-color: var(--main-color-two);
+                &::before {
+                    background: var(--main-color-two);
+                }
+            }
+        }
+    }
+    .list {
+        font-size: 15px;
+        cursor: pointer;
+        line-height: 26px;
+        margin: 0px 10px 20px;
+        padding: 5px 20px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        color: var(--heading-color);
+        background: $alabaster-color;
+        border-radius: 5px;
+        overflow: hidden;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        @include responsive(allPhone) {
+            padding: 5px 18px;
+            margin: 0 5px 5px;
+        }
+        @include responsive(xs) {
+            font-size: 15px;
+            padding: 5px 15px;
+        }
+        @include responsive(vxxs) {
+            font-size: 14px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: var(--secondary-color);
+            color: $white;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: $transition;
+            -o-transition: $transition;
+            transition: $transition;
+        }
+        &.active {
+            color: $white;
+            &::before {
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+            }
+        }
+        &:hover {
+            color: $white;
+            &::before {
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.black-themes {
+    .isootope-button {
+        &.style-03 {
+            .list {
+                border: 1px solid #22232F;
+                background: #22232F;
+                color: $white;
+                &.active {
+                    background: var(--main-color-two);
+                    color: var(--heading-color);
+                }
+                &:hover {
+                    background: var(--main-color-two);
+                    color: var(--heading-color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,353 @@
+/*---------------------------------------
+    36. Order Complete Area
+---------------------------------------*/
+
+.order-completed-area {}
+
+.order-completed-wrapper {}
+
+.order-completed-header {
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.order-completed-icon {
+    img {}
+}
+
+.order-complete-title {
+    font-size: 42px;
+    line-height: 60px;
+    @include responsive(allPhone) {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    @include responsive(xs) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    @include responsive(xxs) {
+        font-size: 28px;
+    }
+    @include responsive(vxxs) {
+        font-size: 25px;
+    }
+}
+
+.order-complete-para {
+    font-size: 18px;
+    line-height: 30px;
+    @include responsive(allPhone) {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    @include responsive(xxs) {
+        font-size: 15px;
+    }
+}
+
+.order-complete-contents {
+    -webkit-box-shadow: 0 0 20px rgba($steam-color, .3);
+    box-shadow: 0 0 20px rgba($steam-color, .3);
+    padding: 25px 50px 50px;
+    @include responsive(xl) {
+        padding: 0 30px 30px;
+    }
+    @include responsive(lg) {
+        padding: 0 30px 30px;
+    }
+    @include responsive(allPhone) {
+        padding: 0 30px 30px;
+    }
+}
+
+.single-order-top {
+    .order-thumb-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        @include responsive(xxs) {
+            display: block;
+        }
+        .order-thumbs {
+            height: 135px;
+            width: 190px;
+            margin-right: 20px;
+            @include responsive(xl) {
+                width: 130px;
+                margin-right: 15px;
+            }
+            @include responsive(xxs) {
+                margin: 0 auto 10px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+        }
+        .order-thumb-content {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            @include responsive(lg) {
+                margin-top: 10px;
+            }
+            @include responsive(xxs) {
+                text-align: center;
+            }
+            .order-thumb-title {
+                font-size: 18px;
+                line-height: 32px;
+            }
+            .common-dates {
+                margin-top: 10px;
+                display: block;
+            }
+        }
+    }
+    .order-id {}
+    .common-price {}
+    .payment-card {
+        padding: 5px 10px;
+        background: $white;
+        -webkit-box-shadow: 0 0 5px rgba($steam-color, .1);
+        box-shadow: 0 0 5px rgba($steam-color, .1);
+        display: inline-block;
+    }
+    .btn-icon {
+        .icon {
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            font-size: 20px;
+            margin: 5px;
+            &:hover {
+                color: var(--main-color-three);
+            }
+        }
+    }
+}
+
+.order-border-two {
+    &:not(:last-child) {
+        border-bottom: 2px solid rgba($steam-color, .3);
+        padding-bottom: 30px;
+    }
+}
+
+.order-complete-contents {
+    div[class*=col] {
+        .single-order-top {
+            @include responsive(xxs) {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+        &:nth-child(3n+2) {
+            .single-order-top {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                @include responsive(sm) {
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                }
+                @include responsive(xs) {
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .single-order-top {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                @include responsive(xs) {
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                }
+            }
+        }
+        &:nth-child(2n+2) {
+            .single-complete-orders {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                @include responsive(sm) {
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+
+.single-complete-orders {
+    .order-titles {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 36px;
+        @include responsive(allPhone) {
+            font-size: 21px;
+        }
+        @include responsive(xs) {
+            font-size: 18px;
+        }
+        @include responsive(xxs) {
+            font-size: 19px;
+        }
+    }
+    .details-list {
+        .lists {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            @include responsive(xs) {
+                font-size: 15px;
+            }
+            @include responsive(xxs) {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                font-size: 14px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            .list-span {
+                width: 150px;
+                display: block;
+                @include responsive(allPhone) {
+                    width: 120px;
+                }
+            }
+            .list-strong {
+                color: var(--heading-color);
+                font-weight: 500;
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                @include responsive(xxs) {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+.order-title {
+    font-size: 28px;
+    line-height: 36px;
+    padding-bottom: 15px;
+    position: relative;
+    @include responsive(allPhone) {
+        font-size: 26px;
+    }
+    @include responsive(xs) {
+        font-size: 25px;
+    }
+    @include responsive(xxs) {
+        font-size: 24px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 100px;
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        text-align: center;
+        margin: 0 auto;
+        background: var(--main-color-three);
+    }
+}
+
+.single-order-list {
+    .order-flex-list {
+        .list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 15px 0;
+            color: var(--light-color);
+            font-size: 18px;
+            text-align: left;
+            @include responsive(xs) {
+                font-size: 16px;
+            }
+            @include responsive(xxs) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.order-border {
+    &:not(:first-child) {
+        border-top: 1px solid $steam-color;
+    }
+}
+
+.order-complete-bottom {
+    .btn-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}

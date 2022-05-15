@@ -1,0 +1,330 @@
+/*-------------------------
+    05. Section title
+-------------------------*/
+
+.section-title {
+    text-align: center;
+    &.text-left {
+        text-align: left;
+    }
+    &.white-color {
+        color: $white;
+        .title {
+            color: $white;
+        }
+    }
+    &.section-border-bottom {
+        border-bottom: 2px solid #ddd;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            background: var(--main-color-two);
+            height: 2px;
+            margin: -2px 0;
+        }
+        @include responsive(allPhone) {
+            padding-bottom: 20px;
+        }
+    }
+    &.title-style-two {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            height: 2px;
+            width: 100px;
+            background: var(--main-color-two);
+        }
+    }
+    &.title-style-three {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 1px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            height: 2px;
+            width: 100px;
+            background: var(--main-color-three);
+        }
+        .title {}
+    }
+    .title {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 60px;
+        color: var(--heading-color);
+        font-family: var(--roboto-font);
+        margin: -10px 0 0 0;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        @include responsive(allPhone) {
+            font-size: 34px;
+            line-height: 42px;
+        }
+        @include responsive(xs) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        @include responsive(vxxs) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .title-image {
+            img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.section-title-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    &.text-left {
+        text-align: left;
+    }
+    &.white-color {
+        color: $white;
+        .title {
+            color: $white;
+        }
+    }
+    &.section-border-bottom {
+        border-bottom: 2px solid #ddd;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            background: var(--main-color-two);
+            height: 2px;
+            margin: -2px 0;
+        }
+        @include responsive(allPhone) {
+            padding-bottom: 20px;
+        }
+    }
+    &.section-border {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background: var(--main-color-three);
+            height: 2px;
+            width: 100px;
+        }
+    }
+    .title {
+        font-size: 42px;
+        line-height: 62px;
+        color: var(--heading-color);
+        font-family: var(--roboto-font);
+        margin: -10px 0 0 0;
+        position: relative;
+        z-index: 1;
+        @include responsive(allPhone) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include responsive(xs) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include responsive(vxxs) {
+            font-size: 25px;
+            line-height: 28px;
+        }
+    }
+}
+
+.section-title-three {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    @include responsive(vxxs) {
+        display: block;
+    }
+    &.text-left {
+        text-align: left;
+    }
+    &.white-color {
+        color: $white;
+        .title {
+            color: $white;
+        }
+    }
+    &.section-border {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 20px;
+        @include responsive(vxxs) {
+            padding-bottom: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background: var(--main-color-three);
+            height: 2px;
+            width: 100px;
+            @include responsive(vxxs) {
+                display: none;
+            }
+        }
+    }
+    .title {
+        font-size: 42px;
+        line-height: 62px;
+        font-weight: 500;
+        color: var(--heading-color);
+        font-family: var(--rubik-font);
+        margin: -10px 0 0 0;
+        position: relative;
+        z-index: 1;
+        @include responsive(allPhone) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        @include responsive(xs) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include responsive(vxxs) {
+            font-size: 25px;
+            line-height: 28px;
+        }
+    }
+}
+
+.view-item {
+    .section-btn-views {
+        color: var(--main-color-three);
+        padding: 12px 20px;
+        border: 1px solid var(--main-color-three);
+        font-size: 16px;
+        font-weight: 500;
+        display: inline-block;
+        transition: all .3s;
+        @include responsive(allPhone) {
+            padding: 10px 17px;
+        }
+        @include responsive(xs) {
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+        @include responsive(vxxs) {
+            padding: 8px 12px;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+        &:hover {
+            background: var(--main-color-three);
+            color: $white;
+        }
+    }
+}
+
+.view-all {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--heading-color);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    font-size: 18px;
+    text-align: right;
+    &:hover {
+        color: var(--main-color-one);
+    }
+    &::after {
+        content: "\f30b";
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+        color: var(--main-color-one);
+    }
+    &.arrow-two {
+        &::after {
+            content: "\f105";
+        }
+    }
+    &.color-two {
+        &:hover {
+            color: var(--main-color-two);
+        }
+        &::after {
+            color: var(--main-color-two);
+        }
+    }
+    &.color-three {
+        &:hover {
+            color: var(--main-color-three);
+        }
+        &::after {
+            color: var(--main-color-three);
+        }
+    }
+    &.color-four {
+        &:hover {
+            color: var(--main-color-four);
+        }
+        &::after {
+            color: var(--main-color-four);
+        }
+    }
+    @include responsive(xs) {
+        font-size: 19px;
+    }
+    @include responsive(vxxs) {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,102 @@
+/*---------------------------------------
+    22. Selling Area
+---------------------------------------*/
+
+.selling-slider {
+    .single-slider {
+        margin: 7px;
+        @include responsive(allPhone) {
+            margin: 0;
+        }
+    }
+    .slick-list {
+        margin: -7px;
+        @include responsive(allPhone) {
+            margin: 0;
+        }
+    }
+}
+
+.selling-wrapper {
+    @include responsive(allPhone) {
+        margin-top: 50px;
+    }
+    @include responsive(xs) {
+        margin-top: 30px;
+    }
+}
+
+.selling-inner {
+    .section-title {
+        .title {
+            @include responsive(xs) {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+.selling-title {
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 400;
+    @include responsive(xs) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    @include responsive(vxxs) {
+        font-size: 18px;
+    }
+}
+
+.selling-para {
+    font-size: 18px;
+    line-height: 32px;
+    @include responsive(lg) {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.selling-padding-left {
+    padding-left: 50px;
+    @include responsive(xl) {
+        padding-left: 0;
+    }
+    @include responsive(lg) {
+        padding-left: 0;
+    }
+    @include responsive(allPhone) {
+        padding-left: 0;
+    }
+}
+
+.choose-selling {
+    .common-para {
+        line-height: 36px;
+        padding-right: 30px;
+        @include responsive(allPhone) {
+            font-size: 18px !important;
+            line-height: 28px;
+        }
+        @include responsive(xxs) {
+            font-size: 17px !important;
+        }
+        @include responsive(vxxs) {
+            font-size: 16px !important;
+        }
+    }
+}
+
+.section-title {
+    .title.title-lg-small {
+        @include responsive(xl) {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        @include responsive(lg) {
+            font-size: 33px;
+            line-height: 48px;
+        }
+    }
+}

@@ -1,0 +1,351 @@
+/*---------------------------------------
+    39. Tickets Area
+---------------------------------------*/
+
+.ticket-area {}
+
+.ticket-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.ticket-details-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    @include responsive(xxs) {
+        display: block;
+    }
+    .ticket-title {
+        margin-right: 20px;
+        @include responsive(xxs) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.ticket-title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 500;
+    margin: -5px 0 0;
+    @include responsive(allPhone) {
+        font-size: 26px;
+    }
+    @include responsive(xs) {
+        font-size: 25px;
+    }
+    @include responsive(xxs) {
+        font-size: 24px;
+    }
+}
+
+.ticket-inner {}
+
+.ticket-input {
+    display: -webkit-box;
+    .label-title {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--heading-font);
+        line-height: 28px;
+        color: var(--heading-color);
+    }
+    .form--control {
+        height: 60px;
+        line-height: 60px;
+        border: 1px solid rgba($steam-color, 0.3);
+        color: var(--light-color);
+        font-size: 16px;
+        padding: 0px 20px;
+        -webkit-box-shadow: 0 0 10px rgba($steam-color, 0.1);
+        box-shadow: 0 0 10px rgba($steam-color, 0.1);
+        background: $white;
+        &:focus {
+            -webkit-box-shadow: 0 0 10px rgba($main-color-three, 0.1);
+            box-shadow: 0 0 10px rgba($main-color-three, 0.1);
+            border-color: rgba($main-color-three, .2);
+        }
+        &::-webkit-input-placeholder {
+            color: var(--light-color);
+        }
+        &::-moz-placeholder {
+            color: var(--light-color);
+        }
+        &:-ms-input-placeholder {
+            color: var(--light-color);
+        }
+        &::-ms-input-placeholder {
+            color: var(--light-color);
+        }
+        &::placeholder {
+            color: var(--light-color);
+        }
+    }
+    .file-choose {
+        line-height: 40px;
+        padding: 6px 20px;
+    }
+    .nice-select {
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        border: 1px solid rgba($steam-color, 0.3);
+        -webkit-box-shadow: 0 0 10px rgba($steam-color, 0.1);
+        box-shadow: 0 0 10px rgba($steam-color, 0.1);
+        font-size: 16px;
+        color: var(--light-color);
+        .list {
+            width: 100%;
+            padding-top: 72px;
+        }
+        &.open {
+            border-color: rgba($main-color-three, .2);
+            -webkit-box-shadow: 0 0 10px rgba($main-color-three, 0.1);
+            box-shadow: 0 0 10px rgba($main-color-three, 0.1);
+        }
+        &::after {
+            right: 20px;
+        }
+    }
+}
+
+.ticket-details-list {
+    .lists {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        @include responsive(xs) {
+            font-size: 15px;
+        }
+        @include responsive(xxs) {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .list-span {
+            width: 150px;
+            display: block;
+            color: var(--light-color);
+            @include responsive(allPhone) {
+                width: 120px;
+            }
+        }
+        .list-strong {
+            color: var(--heading-color);
+            font-weight: 500;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            @include responsive(xxs) {
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+
+/* Ticket Conversation  */
+
+.ticket-details-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ticket-conversation {
+    -webkit-box-shadow: 0 0 20px rgba($steam-color, 0.2);
+    box-shadow: 0 0 20px rgba($steam-color, 0.2);
+    padding: 50px;
+    @include responsive(allPhone) {
+        padding: 30px;
+    }
+    @include responsive(xxs) {
+        padding: 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 10px;
+    }
+}
+
+.conversation-title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 500;
+    @include responsive(allPhone) {
+        font-size: 26px;
+    }
+    @include responsive(xs) {
+        font-size: 25px;
+    }
+    @include responsive(xxs) {
+        font-size: 24px;
+    }
+}
+
+.single-conversation {
+    padding: 30px;
+    @include responsive(xs) {
+        padding: 20px;
+    }
+    .conversation-thumb-contents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        @include responsive(xxs) {
+            display: block;
+        }
+        .thumbs {
+            margin-right: 20px;
+            height: 80px;
+            width: 80px;
+            @include responsive(xxs) {
+                margin-bottom: 10px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+        }
+        .thumb-contents {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            .title-thumb {}
+            .conversation-date {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                span {
+                    position: relative;
+                    z-index: 1;
+                    display: block;
+                    margin-top: 10px;
+                    &:not(:last-child) {
+                        &::after {
+                            content: '';
+                            height: 15px;
+                            width: 2px;
+                            right: 0;
+                            top: 50%;
+                            -webkit-transform: translateY(-50%);
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                            position: absolute;
+                            background: $steam-color;
+                        }
+                    }
+                }
+                .common-dates {
+                    padding-right: 10px;
+                }
+                .dates-time {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .conversation-list {
+        .list {
+            font-size: 16px;
+            line-height: 28px;
+            color: var(--light-color);
+            position: relative;
+            padding-left: 20px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                height: 10px;
+                width: 10px;
+                background: var(--main-color-three);
+                border-radius: 50%;
+                left: 0;
+                top: 7px;
+            }
+        }
+    }
+}
+
+
+/* Conversation Replay */
+
+.conversation-replay {
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, 0.3);
+    box-shadow: 0 0 10px rgba($steam-color, 0.3);
+    padding: 50px;
+    @include responsive(allPhone) {
+        padding: 30px;
+    }
+    @include responsive(xxs) {
+        padding: 20px;
+    }
+    @include responsive(vxxs) {
+        padding: 10px;
+    }
+}
+
+.conversation-replay-form {
+    .single-form {
+        .replay-label {
+            font-size: 16px;
+            color: var(--light-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        .message--form {
+            height: 200px;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid rgba($steam-color, 0.3);
+            background: $white;
+            -webkit-box-shadow: 0 0 10px rgba($steam-color, 0.1);
+            box-shadow: 0 0 10px rgba($steam-color, 0.1);
+            &:focus {
+                -webkit-box-shadow: 0 0 10px rgba($main-color-three, .1);
+                box-shadow: 0 0 10px rgba($main-color-three, .1);
+                border-color: rgba($main-color-three, .3);
+            }
+        }
+    }
+    .choose-file-content {
+        .file-size {
+            display: block;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+    .send-message {
+        padding: 15px 30px;
+        border: 0;
+        outline: 0;
+        background: var(--main-color-three);
+    }
+}

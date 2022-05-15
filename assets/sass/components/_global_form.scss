@@ -1,0 +1,36 @@
+/*---------------------------------------
+    08. Isotope List
+---------------------------------------*/
+
+.form--control {
+    height: 55px;
+    line-height: 55px;
+    background: $white;
+    border: 1px solid rgba($steam-color, .3);
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .1);
+    box-shadow: 0 0 10px rgba($steam-color, .1);
+    padding: 15px;
+    font-size: 16px;
+    color: var(--paragraph-color);
+    &:focus {
+        -webkit-box-shadow: 0 0 10px rgba($main-color-one, .1);
+        box-shadow: 0 0 10px rgba($main-color-one, .1);
+        border-color: rgba($main-color-one, .2);
+    }
+    &::-webkit-input-placeholder {
+        color: var(--extra-light-color);
+    }
+    &::-moz-placeholder {
+        color: var(--extra-light-color);
+    }
+    &:-ms-input-placeholder {
+        color: var(--extra-light-color);
+    }
+    &::-ms-input-placeholder {
+        color: var(--extra-light-color);
+    }
+    &::placeholder {
+        color: var(--extra-light-color);
+    }
+}

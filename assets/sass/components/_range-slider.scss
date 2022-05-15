@@ -1,0 +1,93 @@
+/*---------------------------------------
+    13. Range Slider
+---------------------------------------*/
+
+.price-range-slider {
+    padding: 10px 10px 0;
+    .ui-range-slider {
+        &.noUi-target {
+            position: relative;
+            border-radius: 3px;
+            height: 3px;
+            .noUi-handle {
+                top: -9px;
+                left: -3px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                background: var(--main-color-three);
+                cursor: default;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: $white;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    left: 50%;
+                    top: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    display: inline-block;
+                }
+            }
+            .noUi-base {
+                .noUi-origin {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                .noUi-connect {
+                    background: var(--main-color-three);
+                }
+            }
+        }
+    }
+    .ui-range-slider-footer {
+        display: table;
+        width: 100%;
+        padding-top: 20px;
+        .ui-range-values {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            color: var(--light-color);
+            .ui-price-title {
+                font-size: 16px;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+            .ui-range-value-min,
+            .ui-range-value-max {
+                display: inline-block;
+                font-size: 16px;
+                border: 1px solid rgba($steam-color, .5);
+                padding: 8px 20px;
+                border-radius: 5px;
+                @include responsive(allPhone) {
+                    padding: 7px 15px;
+                }
+                @include responsive(xxs) {
+                    padding: 5px 12px;
+                }
+            }
+            .ui-range-value-max {}
+        }
+    }
+}
+
+.noUi-background {
+    background: #DDDDDD;
+}

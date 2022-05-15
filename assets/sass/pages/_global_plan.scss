@@ -1,0 +1,268 @@
+/*---------------------------------------
+    24. Global Plan Area
+---------------------------------------*/
+
+.plan-area {
+    position: relative;
+    z-index: 2;
+}
+
+.plan-dot-shape {
+    img {
+        position: absolute;
+        left: 17%;
+        bottom: 35px;
+        z-index: -1;
+        -webkit-animation: 5s floatings linear infinite;
+        animation: 5s floatings linear infinite;
+    }
+}
+
+.global-plan-item {
+    padding: 50px 70px;
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .5);
+    box-shadow: 0 0 10px rgba($steam-color, .5);
+    background: $white;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    overflow: hidden;
+    @include responsive(xl) {
+        padding: 40px 30px;
+    }
+    @include responsive(allPhone) {
+        padding: 50px 30px;
+    }
+    @include responsive(sm) {
+        padding: 50px 50px;
+    }
+    @include responsive(xxs) {
+        padding: 50px 30px;
+    }
+    @include responsive(vxxs) {
+        padding: 30px 20px;
+    }
+    &.style-02 {
+        &:hover {
+            .plan-footer {
+                .btn-wrapper {
+                    .cmn-btn {
+                        background: $white;
+                        color: var(--main-color-two) !important;
+                    }
+                    .gradient-bg-2 {
+                        border: 1px solid $white;
+                        &::before {
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+        &::before {
+            background: $gradient-bg-2;
+        }
+        .global-plan-header {
+            .plan-title {}
+            .plan-price {}
+            .plan-time {
+                background: rgba($main-color-two, .2);
+            }
+        }
+        .plan-middle {
+            .plan-list {
+                .list {
+                    i {
+                        color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+        .plan-footer {
+            .btn-wrapper {
+                .cmn-btn {
+                    &:hover {
+                        background: var(--main-color-two);
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+    &.style-03 {
+        &:hover {
+            .plan-footer {
+                .btn-wrapper {
+                    .cmn-btn {
+                        background: $white;
+                        color: var(--main-color-three) !important;
+                    }
+                    .gradient-bg-3 {
+                        border: 1px solid $white;
+                        &::before {
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+        &::before {
+            background: $gradient-bg-3;
+        }
+        .global-plan-header {
+            .plan-title {}
+            .plan-price {}
+            .plan-time {
+                background: rgba($main-color-three, .2);
+            }
+        }
+        .plan-middle {
+            .plan-list {
+                .list {
+                    i {
+                        color: var(--main-color-three);
+                    }
+                }
+            }
+        }
+        .plan-footer {
+            .btn-wrapper {
+                .cmn-btn {
+                    &:hover {
+                        background: var(--main-color-three);
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+    &::before {
+        background: $gradient-bg-secondary;
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+    &:hover {
+        -webkit-transform: scaleY(1.05);
+        -ms-transform: scaleY(1.05);
+        transform: scaleY(1.05);
+        color: $white;
+        &::before {
+            visibility: visible;
+            opacity: 1;
+        }
+        .global-plan-header {
+            .plan-title {
+                color: $white;
+            }
+            .plan-price {
+                color: $white;
+            }
+            .plan-time {
+                background: rgba($white, .2);
+                color: $white;
+            }
+        }
+        .plan-middle {
+            .plan-list {
+                .list {
+                    color: $white;
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .plan-footer {
+            .btn-wrapper {
+                .cmn-btn {
+                    background: none;
+                    color: $white !important;
+                }
+                .gradient-bg-1 {
+                    color: $white !important;
+                    border: 1px solid $white;
+                    &::before {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+    &.center-text {
+        text-align: center;
+    }
+}
+
+.global-plan-header {
+    .plan-title {
+        @include responsive(allPhone) {
+            font-size: 28px !important;
+            line-height: 30px;
+        }
+    }
+    .plan-price {
+        display: block;
+        @include responsive(allPhone) {
+            font-size: 40px !important;
+            line-height: 45px;
+        }
+    }
+    .plan-time {
+        background: rgba($main-color-one, .2);
+        padding: 7px 40px;
+        display: inline-block;
+        @include responsive(allPhone) {
+            font-size: 17px !important;
+            padding: 5px 30px;
+            margin-top: 15px !important;
+        }
+    }
+}
+
+.plan-middle {
+    @include responsive(sm) {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    @include responsive(xs) {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    .plan-list {
+        text-align: left;
+        .list {
+            font-size: 18px;
+            color: var(--light-color);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            line-height: 28px;
+            @include responsive(allPhone) {
+                font-size: 16px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            i {
+                color: var(--main-color-one);
+                margin-right: 20px;
+                @include responsive(allPhone) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

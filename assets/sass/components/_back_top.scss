@@ -1,0 +1,43 @@
+/*---------------------------------------
+    18. Back To Top
+---------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color-three);
+    color: $white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    z-index: 99;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    @include responsive(allPhone) {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        font-size: 22px;
+    }
+    &:hover {
+        color: $white;
+    }
+    &.bg-color-one {
+        background: var(--main-color-one);
+    }
+    &.bg-color-two {
+        background: var(--main-color-two);
+    }
+    &.bg-color-three {
+        background: var(--main-color-three);
+    }
+}

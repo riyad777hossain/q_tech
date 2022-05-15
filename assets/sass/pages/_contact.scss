@@ -1,0 +1,173 @@
+/*---------------------------------------
+    37. Contact Area
+---------------------------------------*/
+
+.contact-area {}
+
+.contact-wrappers {}
+
+.contact-title {
+    font-size: 42px;
+    line-height: 60px;
+    color: var(--heading-color);
+    font-weight: 500;
+    margin: -10px 0 0;
+    position: relative;
+    padding-bottom: 15px;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background: var(--main-color-three);
+    }
+    @include responsive(allPhone) {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    @include responsive(xxs) {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    @include responsive(vxxs) {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+.contacts-content-wrapper {
+    padding-left: 70px;
+    @include responsive(allPhone) {
+        padding-left: 0;
+    }
+}
+
+.single-contact-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 30px;
+    @include responsive(vxxs) {
+        display: block;
+    }
+    .contact-icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 22px;
+        background: var(--main-color-three);
+        color: $white;
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+    .contact-icon-contents {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        @include responsive(vxxs) {
+            margin-top: 10px;
+        }
+        .item-title {
+            font-size: 22px;
+            line-height: 36px;
+            color: var(--heading-color);
+            font-weight: 500;
+            display: block;
+            @include responsive(lg) {
+                font-size: 21px;
+            }
+            @include responsive(allPhone) {
+                font-size: 20px;
+            }
+            @include responsive(xs) {
+                font-size: 19px;
+            }
+            @include responsive(xxs) {
+                font-size: 18px;
+            }
+        }
+        .item-para {
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--light-color);
+            -webkit-transition: (all 200ms);
+            -o-transition: (all 200ms);
+            transition: (all 200ms);
+            margin-top: 10px;
+            display: block;
+            &:hover {
+                color: var(--main-color-three);
+            }
+            @include responsive(xl) {
+                font-size: 20px;
+            }
+            @include responsive(lg) {
+                font-size: 20px;
+            }
+            @include responsive(allPhone) {
+                font-size: 18px;
+                line-height: 36px;
+            }
+            @include responsive(xxs) {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+.single-input {
+    .label-title {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--heading-font);
+        line-height: 28px;
+        color: var(--heading-color);
+    }
+    .form--control {
+        height: 60px;
+        border: 1px solid rgba($steam-color, .3);
+        color: var(--extra-light-color);
+        font-size: 16px;
+        padding: 15px 20px;
+        -webkit-box-shadow: 0 0 10px rgba($steam-color, .1);
+        box-shadow: 0 0 10px rgba($steam-color, .1);
+        &::-webkit-input-placeholder {
+            color: var(--extra-light-color);
+        }
+        &::-moz-placeholder {
+            color: var(--extra-light-color);
+        }
+        &:-ms-input-placeholder {
+            color: var(--extra-light-color);
+        }
+        &::-ms-input-placeholder {
+            color: var(--extra-light-color);
+        }
+        &::placeholder {
+            color: var(--extra-light-color);
+        }
+        &:focus {
+            -webkit-box-shadow: 0 0 5px rgba($main-color-three, .1);
+            box-shadow: 0 0 5px rgba($main-color-three, .1);
+            border-color: rgba($main-color-three, .2);
+        }
+        &.textarea-form {
+            padding: 15px 20px;
+            height: 185px;
+        }
+    }
+}

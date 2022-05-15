@@ -1,0 +1,214 @@
+/*---------------------------------------
+    25. Blog Area
+---------------------------------------*/
+
+.blog-area {}
+
+.single-blog {
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .5);
+    box-shadow: 0 0 10px rgba($steam-color, .5);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    &.style-02 {
+        padding: 20px;
+        .blog-contents {
+            padding: 0;
+            padding-top: 15px;
+            .blog-tag-contents {
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                .tags {
+                    padding: 0 7px;
+                    border-radius: 5px;
+                    -webkit-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                    &.color-1 {
+                        background: rgba($main-color-one, .2);
+                        &:hover {
+                            background: var(--main-color-one);
+                            color: $white;
+                        }
+                    }
+                    &.color-2 {
+                        background: rgba($main-color-two, .2);
+                        &:hover {
+                            background: var(--main-color-two);
+                            color: $white;
+                        }
+                    }
+                    &.color-3 {
+                        background: rgba($main-color-three, .2);
+                        &:hover {
+                            background: var(--main-color-three);
+                            color: $white;
+                        }
+                    }
+                    &.secondary-color {
+                        background: rgba($secondary-color, .2);
+                        &:hover {
+                            background: var(--secondary-color);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .blog-thumb {
+            &::before {
+                visibility: visible;
+                opacity: 1;
+                left: 100%;
+                top: 100%;
+            }
+            img {
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+    }
+    .blog-thumb {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        display: block;
+        @include responsive(allPhone) {
+            display: unset;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            background-color: rgba($white, .3);
+            z-index: 9;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all .7s;
+            -o-transition: all .7s;
+            transition: all .7s;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        img {
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            width: 100%;
+            @include responsive(xxl) {
+                width: 100%;
+            }
+            @include responsive(xl) {
+                width: 100%;
+            }
+            @include responsive(lg) {
+                width: 100%;
+            }
+            @include responsive(allPhone) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.slick-slide {
+    .blog-thumb {
+        display: inline-block;
+        width: auto;
+        img {
+            width: auto;
+            @include responsive(allPhone) {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+.blog-contents {
+    padding: 25px 20px;
+    .blog-tag-contents {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .common-dates {
+            margin-right: 20px;
+            line-height: 28px;
+        }
+    }
+    .common-title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+    }
+}
+
+.blog-list-wrapper {
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .5);
+    box-shadow: 0 0 10px rgba($steam-color, .5);
+    padding: 30px;
+    @include responsive(lg) {
+        padding: 20px;
+    }
+    @include responsive(allPhone) {
+        padding: 20px;
+    }
+    .blog-thumb-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        @include responsive(sm) {
+            display: block;
+        }
+        .blog-thumbs {
+            margin-right: 30px;
+            @include responsive(lg) {
+                max-width: 340px;
+            }
+            img {
+                @include responsive(sm) {
+                    width: 100%;
+                }
+            }
+            @include responsive(allPhone) {
+                margin-right: 20px;
+            }
+            @include responsive(sm) {
+                margin-right: 0px;
+                margin-bottom: 15px;
+            }
+        }
+        .blog-list-contents {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            .common-title {}
+            .common-para {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+}

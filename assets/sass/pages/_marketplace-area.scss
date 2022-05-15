@@ -1,0 +1,375 @@
+/*---------------------------------------
+    30. Marketplace Area
+---------------------------------------*/
+
+.marketplace-area {
+    overflow: hidden;
+}
+
+.marketplace-left {
+    @include responsive(sm) {
+        margin-bottom: 10px;
+    }
+    .showing-results {
+        @include responsive(allPhone) {
+            font-size: 17px !important;
+        }
+        @include responsive(xs) {
+            font-size: 16px !important;
+        }
+        @include responsive(vxxs) {
+            font-size: 15px !important;
+        }
+    }
+}
+
+.marketplace-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include responsive(allPhone) {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    .single-marketplace {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        .nice-select {
+            font-size: 16px;
+            color: var(--light-color);
+            border: 0;
+            outline: none;
+            height: 50px;
+            line-height: 50px;
+            background: $alabaster-color;
+            .list {
+                padding: 62px 0 0;
+                max-height: 230px;
+            }
+            @include responsive(xs) {
+                padding: 0 30px 0 15px;
+            }
+            &::after {
+                border-bottom: 2px solid var(--light-color);
+                border-right: 2px solid var(--light-color);
+                right: 20px;
+            }
+            .list {
+                min-width: 100% !important;
+            }
+        }
+        .marketplace-flex-icon {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .marketplace-icons {
+            font-size: 24px;
+            height: 40px;
+            width: 40px;
+            background: $white;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            border: 1px solid $steam-color;
+            border-radius: 5px;
+            &.active {
+                background: rgba($main-color-three, .1);
+                border: none;
+                color: var(--main-color-three);
+            }
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.marketplace-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 5px 0;
+    .brand-thumb {
+        height: 35px;
+        width: 35px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 2px;
+        margin: 5px 5px;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+.filter-category-select {
+    position: relative;
+    z-index: 5;
+    &:hover {
+        .filter-list-category {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+    }
+    .category {
+        .category-filter {
+            display: inline-block;
+            cursor: pointer;
+            background-color: var(--main-color-three);
+            color: $white;
+            padding: 10px 20px;
+        }
+    }
+    .filter-list-category {
+        background-color: $white;
+        padding: 20px;
+        -webkit-box-shadow: 0 0 10px rgba($steam-color, .3);
+        box-shadow: 0 0 10px rgba($steam-color, .3);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 9;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        .filter-select {
+            display: block;
+            padding: 5px 0 5px 30px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            color: var(--heading-color);
+            font-size: 16px;
+            font-weight: 500;
+            width: -webkit-max-content;
+            width: -moz-max-content;
+            width: max-content;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            &:hover {
+                color: var(--main-color-three);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border: 1px solid rgba($steam-color, .3);
+                background-color: $white;
+                left: 0;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+            &.check-active {
+                &::before {
+                    @include line-awesome;
+                    content: "\f00c";
+                    background-color: var(--main-color-three);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.selected-filter-contents {
+    .selected-flex-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        li {
+            font-size: 16px;
+            color: var(--extra-light-color);
+            line-height: 26px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            margin: 7px 15px 7px 0px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include responsive(xs) {
+                font-size: 15px;
+            }
+            @include responsive(vxxs) {
+                font-size: 14px;
+            }
+            a {
+                display: inline-block;
+                color: var(--main-color-three);
+                position: relative;
+                z-index: 2;
+                background: rgba($main-color-three, .1);
+                padding: 10px 30px 10px 15px;
+                border-radius: 5px;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                @include responsive(allPhone) {
+                    padding: 6px 30px 6px 15px;
+                }
+                &:hover {
+                    background: var(--main-color-three);
+                    color: $white;
+                    &::after {
+                        color: $white !important;
+                    }
+                }
+            }
+            &:not(:last-child) {
+                a {
+                    &::after {
+                        content: "\f00d";
+                        @include line-awesome;
+                        position: absolute;
+                        right: 10px;
+                        color: var(--main-color-three);
+                        -webkit-transition: (all 100ms);
+                        -o-transition: (all 100ms);
+                        transition: (all 100ms);
+                        @include responsive(vxxs) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.marketplace-list-wrapper {
+    padding: 15px 30px;
+    background: $white;
+    -webkit-box-shadow: 0 0 10px rgba($steam-color, .3);
+    box-shadow: 0 0 10px rgba($steam-color, .3);
+    @include responsive(xl) {
+        padding: 30px 40px;
+    }
+    .marketplace-wrapper-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .global-card-right {
+        padding: 15px 0;
+        @include responsive(xxs) {
+            margin-right: 30px;
+        }
+    }
+    .global-card-left {
+        padding: 15px 0;
+        @include responsive(allPhone) {
+            text-align: left;
+        }
+    }
+}
+
+.marketplace-list-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 400px;
+    padding: 15px 0;
+    @include responsive(xxs) {
+        display: block;
+    }
+    .marketplace-thumbs {
+        margin-right: 30px;
+        height: 120px;
+        width: 120px;
+        @include responsive(sm) {
+            margin-right: 20px;
+        }
+        @include responsive(xxs) {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+    .marketplace-list-contents {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+}

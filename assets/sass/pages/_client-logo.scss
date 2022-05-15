@@ -1,0 +1,300 @@
+/*---------------------------------------
+    26. Client Logo
+---------------------------------------*/
+
+.client-item-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include responsive(xl) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    @include responsive(lg) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    @include responsive(allPhone) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .single-client-items {
+        width: calc((100% / 10) - 10px);
+        margin-top: 30px;
+        position: relative;
+        @include responsive(xl) {
+            width: calc((100% / 8) - 12px);
+            padding: 0 15px;
+        }
+        @include responsive(lg) {
+            width: calc((100% / 8) - 12px);
+            padding: 0 15px;
+        }
+        @include responsive(allPhone) {
+            width: calc((100% / 6) - 12px);
+            padding: 0 15px;
+        }
+        @include responsive(sm) {
+            width: calc((100% / 4) - 23px);
+        }
+        @include responsive(xs) {
+            width: calc((100% / 3) - 23px);
+        }
+        @include responsive(vxxs) {
+            width: calc((100% / 2) - 25px);
+        }
+        &:nth-child(4) {
+            .client-hover-item {
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .client-hover-item {
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(6) {
+            .client-hover-item {
+                @include responsive(lg) {
+                    left: auto;
+                    right: 100%;
+                }
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(7) {
+            .client-hover-item {
+                @include responsive(xl) {
+                    left: auto;
+                    right: 100%;
+                }
+                @include responsive(lg) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(8) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+                @include responsive(allPhone) {
+                    left: 100%;
+                }
+            }
+        }
+        &:nth-child(9) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+                @include responsive(lg) {
+                    left: 100%;
+                }
+                @include responsive(allPhone) {
+                    left: 100%;
+                }
+            }
+        }
+        &:nth-child(10) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+                @include responsive(lg) {
+                    left: 100%;
+                }
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(11) {
+            .client-hover-item {
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(12) {
+            .client-hover-item {
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(14) {
+            .client-hover-item {
+                @include responsive(lg) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(15) {
+            .client-hover-item {
+                @include responsive(xl) {
+                    left: auto;
+                    right: 100%;
+                }
+                @include responsive(lg) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(16) {
+            .client-hover-item {
+                @include responsive(xl) {
+                    left: auto;
+                    right: 100%;
+                }
+                @include responsive(lg) {
+                    left: auto;
+                    right: 100%;
+                }
+                @include responsive(allPhone) {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+        &:nth-child(17) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+                @include responsive(lg) {
+                    left: 100%;
+                }
+            }
+        }
+        &:nth-child(18) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+            }
+        }
+        &:nth-child(19) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+                @include responsive(allPhone) {
+                    left: 100%;
+                }
+            }
+        }
+        &:nth-child(20) {
+            .client-hover-item {
+                left: auto;
+                right: 100%;
+            }
+        }
+        .client-hover-item {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            z-index: 5;
+            width: 350px;
+            background: $white;
+            transition: all .3s;
+            box-shadow: 0 0 10px rgba($secondary-color, .1);
+            @include responsive(allPhone) {
+                width: 300px;
+            }
+            @include responsive(sm) {
+                display: none;
+            }
+            .client-hover-contents {
+                padding: 20px;
+                position: relative;
+                z-index: 1;
+                .clients-hover-img {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .common-title {
+                    line-height: 32px;
+                    font-size: 22px;
+                }
+                .author-clients {
+                    color: var(--light-color);
+                    display: block;
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    z-index: 9;
+                    background: var(--main-color-three);
+                    color: $white;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin: 0;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    &.grid-item-8 {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .single-client-items {
+            width: calc((100% / 8) - 17px);
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+    &.grid-item-7 {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .single-client-items {
+            width: calc((100% / 7) - 23px);
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+    &.grid-item-6 {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .single-client-items {
+            width: calc((100% / 6) - 25px);
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+    &.grid-item-5 {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .single-client-items {
+            width: calc((100% / 5) - 27px);
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+/*---------------------------------------
+    20. Promo Area
+---------------------------------------*/
+
+.promo-area {}
+
+.promo-bg {
+    background-color: $alabaster-color;
+}
+
+.single-promo {
+    &.style-03 {
+        background: $white;
+        -webkit-box-shadow: 0 0 5px rgba($black, .08);
+        box-shadow: 0 0 5px rgba($black, .08);
+        padding: 40px 20px;
+        .promo-icon-thumb {
+            margin: 0 auto 20px;
+        }
+        .promo-contents {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+    &.style-02 {
+        padding: 40px 20px;
+        .promo-icon-thumb {
+            margin: 0 auto 25px;
+            &::before {
+                background: $white;
+                -webkit-box-shadow: 0 0 5px rgba($black, .08);
+                box-shadow: 0 0 5px rgba($black, .08);
+                border: 0;
+                height: unset;
+                width: unset;
+            }
+        }
+        .promo-contents {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding: 0;
+            .promo-title {
+                color: $white;
+            }
+            .promo-sub {
+                color: $white;
+            }
+        }
+    }
+    .promo-icon-thumb {
+        height: 70px;
+        width: 70px;
+        margin: 0 auto -40px;
+        background: $white;
+        border-radius: 50%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        &.xd-border {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                border: 3px solid #FF26BE;
+                border-radius: 50%;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: calc(100% + 10px);
+            width: calc(100% + 10px);
+            left: -5px;
+            top: -5px;
+            z-index: -1;
+            border-radius: 50%;
+            border: 5px solid $white;
+            -webkit-box-shadow: 0 0 10px rgba($steam-color, .7);
+            box-shadow: 0 0 10px rgba($steam-color, .7);
+        }
+        img {}
+    }
+    .promo-contents {
+        // -webkit-box-shadow: 0 0 10px rgba($steam-color, .3);
+        // box-shadow: 0 0 10px rgba($steam-color, .3);
+        padding: 70px 30px 30px;
+        .promo-title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+        .promo-sub {
+            font-size: 14px;
+            line-height: 26px;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+}

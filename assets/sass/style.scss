@@ -1,0 +1,92 @@
+/*=========================================================
+		Table Of Contents
+=========================================================*/
+
+
+/*
+01. Google Fonts
+02. Global Style
+03. Navbar Style
+04. Footer Style
+05. Section title
+06. Button
+07. Global form
+08. Isotope List
+09. Common Tag
+10. Counter
+11. Faq
+12. Badge
+13. Range Slider
+14. Left Sidebar
+15. Pagination
+16. Table
+17. Checkbox
+18. Back To Top
+19. Banner Area
+20. Promo Area
+21. Global Card Area
+22. Selling Area
+23. Choose Area
+24. Global Plan Area
+25. Blog Area
+26. Client Logo
+27. Feedback Area
+28. About Area
+29. Single Page Area
+30. Marketplace Area
+31. Comments Area
+32. Blog Details Area
+33. Cart Area
+34. Checkout Area
+35. Sign In Sign Up Area
+36. Order Complete Area
+37. Contact Area 
+38. Seller Profile Area
+39. Tickets Area
+*/
+
+// Abstracts style
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/variables";
+// base Style
+@import "../sass/base/global";
+// layouts
+@import"../sass/layout/navbar";
+@import"../sass/layout/footer";
+// components style
+@import"../sass/components/section_title";
+@import"../sass/components/button";
+@import"../sass/components/global_form";
+@import"../sass/components/isotope-list";
+@import"../sass/components/common-tag";
+@import"../sass/components/counter";
+@import"../sass/components/faq";
+@import"../sass/components/badge";
+@import"../sass/components/range-slider";
+@import"../sass/components/left-sidebar";
+@import"../sass/components/pagination";
+@import"../sass/components/table";
+@import"../sass/components/checkbox";
+@import"../sass/components/back_top";
+// Pages style
+@import "../sass/pages/banner";
+@import "../sass/pages/promo";
+@import "../sass/pages/global_card";
+@import "../sass/pages/selling-area";
+@import "../sass/pages/choose-area";
+@import "../sass/pages/global_plan";
+@import "../sass/pages/blog";
+@import "../sass/pages/client-logo";
+@import "../sass/pages/feedback";
+@import "../sass/pages/about";
+@import "../sass/pages/single-page";
+@import "../sass/pages/marketplace-area";
+@import "../sass/pages/comments";
+@import "../sass/pages/blog_details";
+@import "../sass/pages/cart";
+@import "../sass/pages/checkout";
+@import "../sass/pages/signin_signup";
+@import "../sass/pages/order_complete";
+@import "../sass/pages/contact";
+@import "../sass/pages/seller_profile_all";
+@import "../sass/pages/ticket";

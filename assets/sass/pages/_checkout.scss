@@ -1,0 +1,275 @@
+/*---------------------------------------
+    34. Checkout Area
+---------------------------------------*/
+
+.checkout-area {
+    overflow: hidden;
+}
+
+.checkout-wrapper {}
+
+.checkout-title {
+    i {
+        color: var(--main-color-three);
+    }
+    @include responsive(vxxs) {
+        font-size: 15px !important;
+    }
+}
+
+.checkout-inner {
+    .common-title {}
+}
+
+a.create-accounts {
+    @include responsive(sm) {
+        font-size: 18px !important;
+    }
+    @include responsive(vxxs) {
+        font-size: 16px !important;
+    }
+}
+
+.click-open-form {
+    &:hover {
+        color: var(--main-color-three);
+        font-weight: 500;
+    }
+}
+
+.checkout-form-open {
+    max-width: 500px;
+    background: $white;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: (all 500ms linear);
+    -o-transition: (all 500ms linear);
+    transition: (all 500ms linear);
+    &.active {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 50px;
+    }
+}
+
+.checkout-signup-form-wrapper {
+    max-width: 700px;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    &.active {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 50px;
+        background: $white;
+    }
+}
+
+.checkout-address-form-wrapper {
+    max-width: 700px;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    &.active {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 30px;
+        background: $white;
+    }
+}
+
+.create-accounts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    gap: 10px;
+    color: var(--heading-color) !important;
+    &:hover {
+        color: var(--heading-color);
+    }
+    &::before {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $steam-color;
+        content: '';
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+    }
+    &.active {
+        &::before {
+            content: "\f00c";
+            @include line-awesome;
+            background: var(--main-color-three);
+            color: $white;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            font-size: 12px;
+            border-color: var(--main-color-three);
+        }
+    }
+}
+
+.checkout-contents {}
+
+.checkout-form {
+    .input-flex-item {
+        .single-input {
+            .label-title {}
+            .form--control {}
+            .form--message {
+                height: 120px;
+            }
+        }
+    }
+    .checkbox-inlines {
+        .check-input {}
+        .checkbox-label {
+            color: var(--heading-color);
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.checkout-order-summery {
+    padding: 50px;
+    @include responsive(xxl) {
+        padding: 40px;
+    }
+    @include responsive(xl) {
+        padding: 30px;
+    }
+    @include responsive(lg) {
+        padding: 30px;
+    }
+    @include responsive(xxs) {
+        padding: 30px;
+    }
+    @include responsive(vxxs) {
+        padding: 20px 10px;
+    }
+}
+
+.checkout-flex-list {
+    .list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 15px 0;
+        color: var(--light-color);
+        font-size: 18px;
+        @include responsive(allPhone) {
+            font-size: 16px;
+            padding: 10px 0;
+        }
+        @include responsive(vxxs) {
+            font-size: 15px;
+            padding: 10px 0;
+        }
+        span {
+            &.product-qnt {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                gap: 20px;
+            }
+            .product-cross {
+                margin-bottom: 0;
+                position: relative;
+                z-index: 2;
+                &::after {
+                    @include line-awesome;
+                    content: "\f00d";
+                    position: absolute;
+                    right: -20px;
+                }
+            }
+        }
+        .input-values {
+            width: 40px;
+            background: none;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.payment-inlines {
+    .payment-card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .single-card {
+            background: $white;
+            padding: 5px 10px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 10px;
+            &.active {
+                &::before {
+                    content: "\f00c";
+                    @include line-awesome;
+                    background: var(--main-color-three);
+                    color: $white;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    height: 14px;
+                    width: 14px;
+                    font-size: 8px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -7px;
+                    right: -7px;
+                    z-index: 9;
+                }
+            }
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
